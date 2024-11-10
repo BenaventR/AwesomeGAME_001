@@ -1,10 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dt86knjdi5402"]
 
-[ext_resource type="Texture2D" uid="uid://d1uwbckqs3thh" path="res://Amanda GUI/BGAG.JPG" id="1_7y86p"]
+[ext_resource type="Texture2D" uid="uid://c8myb4gcrh42g" path="res://Amanda GUI/fire.JPG" id="1_p2ngf"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rq0tf"]
-texture = ExtResource("1_7y86p")
-modulate_color = Color(0.65834, 0.65834, 0.65834, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_crl11"]
+texture = ExtResource("1_p2ngf")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_7vyig"]
 
@@ -40,12 +39,12 @@ shadow_size = 40
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4bsxe"]
 bg_color = Color(0.6, 0.701961, 0.913725, 1)
+draw_center = false
 border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
 border_color = Color(0.101961, 0.290196, 0.701961, 1)
-border_blend = true
 corner_radius_top_left = 35
 corner_radius_top_right = 35
 corner_radius_bottom_right = 35
@@ -68,7 +67,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_rq0tf")
+theme_override_styles/panel = SubResource("StyleBoxTexture_crl11")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -90,11 +89,11 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0.411765, 0.0784314, 0.00392157, 1)
 theme_override_colors/font_pressed_color = Color(0.411765, 0.0784314, 0.00392157, 1)
-theme_override_colors/font_color = Color(0.540954, 0.711627, 0.803189, 1)
-theme_override_colors/font_outline_color = Color(0.93449, 0.929369, 0.919, 1)
+theme_override_colors/font_color = Color(0.188235, 0.419608, 0.647059, 1)
+theme_override_colors/font_outline_color = Color(0.918118, 0.952094, 0.989374, 1)
 theme_override_colors/icon_pressed_color = Color(0.410176, 0.0791294, 0.00462934, 1)
 theme_override_constants/outline_size = 15
-theme_override_font_sizes/font_size = 85
+theme_override_font_sizes/font_size = 30
 theme_override_icons/icon = SubResource("ViewportTexture_7vyig")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nd52d")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g8rka")
@@ -112,7 +111,7 @@ theme_override_colors/font_color = Color(0.540954, 0.711627, 0.803189, 1)
 theme_override_colors/font_outline_color = Color(0.93449, 0.929369, 0.919, 1)
 theme_override_colors/icon_pressed_color = Color(0.410176, 0.0791294, 0.00462934, 1)
 theme_override_constants/outline_size = 15
-theme_override_font_sizes/font_size = 85
+theme_override_font_sizes/font_size = 30
 theme_override_icons/icon = SubResource("ViewportTexture_7vyig")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nd52d")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g8rka")
