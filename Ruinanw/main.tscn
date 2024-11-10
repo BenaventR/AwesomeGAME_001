@@ -1,7 +1,13 @@
 [gd_scene load_steps=15 format=3 uid="uid://cm5hfrmmj2yq4"]
 
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://Ruinanw/main_game.gd" id="1_pyue8"]
 [ext_resource type="Texture2D" uid="uid://b8e3i288t5roy" path="res://Amanda GUI/sprites/New folder/floor.png" id="1_r13nn"]
+||||||| c88c575
+[ext_resource type="Texture2D" uid="uid://i21nq2psutqv" path="res://Amanda GUI/sprites/floor.png" id="1_r13nn"]
+=======
+[ext_resource type="Texture2D" uid="uid://b8e3i288t5roy" path="res://Amanda GUI/sprites/New folder/floor.png" id="1_r13nn"]
+>>>>>>> 3637eb219bbb40c0578a75dc53aacdf10633f1a7
 [ext_resource type="PackedScene" uid="uid://ug1v21q8yqo3" path="res://Ruinanw/char.tscn" id="2_kbodf"]
 [ext_resource type="Script" path="res://Ruinanw/bullet_manager.gd" id="3_xwly4"]
 [ext_resource type="PackedScene" uid="uid://dv45bt7alaim8" path="res://Ruinanw/bullet.tscn" id="4_ioc3f"]
