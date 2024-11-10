@@ -1,24 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://cm5hfrmmj2yq4"]
+[gd_scene load_steps=7 format=3 uid="uid://cm5hfrmmj2yq4"]
 
-[ext_resource type="Texture2D" uid="uid://dppi0twhp60g1" path="res://icon.svg" id="1_2qah1"]
+[ext_resource type="Texture2D" uid="uid://c8myb4gcrh42g" path="res://Amanda GUI/fire.JPG" id="1_ar862"]
+[ext_resource type="Texture2D" uid="uid://i21nq2psutqv" path="res://Amanda GUI/sprites/floor.png" id="1_r13nn"]
 [ext_resource type="PackedScene" uid="uid://ug1v21q8yqo3" path="res://Ruinanw/char.tscn" id="2_kbodf"]
 [ext_resource type="Script" path="res://Ruinanw/bullet_manager.gd" id="3_xwly4"]
 [ext_resource type="PackedScene" uid="uid://dv45bt7alaim8" path="res://Ruinanw/bullet.tscn" id="4_ioc3f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lyea"]
-size = Vector2(128, 128)
+size = Vector2(131.018, 253)
 
 [node name="main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(955, 394.5)
+scale = Vector2(1.64006, 1.70851)
+texture = ExtResource("1_ar862")
 
 [node name="floor" type="StaticBody2D" parent="."]
 position = Vector2(946, 1031)
 scale = Vector2(3.945, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="floor"]
-scale = Vector2(3.945, 1)
-texture = ExtResource("1_2qah1")
+texture_filter = 1
+position = Vector2(-0.253487, -247)
+scale = Vector2(0.269064, 0.976852)
+texture = ExtResource("1_r13nn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2(1.39842, 47.5)
 scale = Vector2(3.945, 1)
 shape = SubResource("RectangleShape2D_5lyea")
 
