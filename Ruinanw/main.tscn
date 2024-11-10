@@ -1,21 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://cm5hfrmmj2yq4"]
+[gd_scene load_steps=9 format=3 uid="uid://cm5hfrmmj2yq4"]
 
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://c8myb4gcrh42g" path="res://Amanda GUI/fire.JPG" id="1_ar862"]
 [ext_resource type="Texture2D" uid="uid://b8e3i288t5roy" path="res://Amanda GUI/sprites/New folder/floor.png" id="2_f2px4"]
+||||||| ff79750
+[ext_resource type="Texture2D" uid="uid://c8myb4gcrh42g" path="res://Amanda GUI/fire.JPG" id="1_ar862"]
+[ext_resource type="Texture2D" uid="uid://i21nq2psutqv" path="res://Amanda GUI/sprites/floor.png" id="1_r13nn"]
+=======
+[ext_resource type="Texture2D" uid="uid://i21nq2psutqv" path="res://Amanda GUI/sprites/floor.png" id="1_r13nn"]
+>>>>>>> c88c57514a11d4f258909630749de78be9e83fc2
 [ext_resource type="PackedScene" uid="uid://ug1v21q8yqo3" path="res://Ruinanw/char.tscn" id="2_kbodf"]
 [ext_resource type="Script" path="res://Ruinanw/bullet_manager.gd" id="3_xwly4"]
 [ext_resource type="PackedScene" uid="uid://dv45bt7alaim8" path="res://Ruinanw/bullet.tscn" id="4_ioc3f"]
+[ext_resource type="Script" path="res://Ruinanw/HP_bar.gd" id="5_tttua"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lyea"]
 size = Vector2(131.018, 253)
 
-[node name="main" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjs4m"]
+bg_color = Color(0.759469, 0.0893011, 0, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(955, 394.5)
-scale = Vector2(1.64006, 1.70851)
-texture = ExtResource("1_ar862")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piw4m"]
+bg_color = Color(0.356342, 0.719194, 0.825671, 1)
+
+[node name="main" type="Node2D"]
 
 [node name="floor" type="StaticBody2D" parent="."]
 position = Vector2(946, 1031)
@@ -38,4 +46,21 @@ shape = SubResource("RectangleShape2D_5lyea")
 script = ExtResource("3_xwly4")
 bullet_scene = ExtResource("4_ioc3f")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 65.0
+offset_top = 65.0
+offset_right = 572.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 81
+theme_override_styles/background = SubResource("StyleBoxFlat_sjs4m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_piw4m")
+value = 100.0
+show_percentage = false
+script = ExtResource("5_tttua")
+player = ExtResource("2_kbodf")
+
+[connection signal="healthChanged" from="playa" to="CanvasLayer/ProgressBar" method="_on_playa_health_changed"]
 [connection signal="shoot" from="playa" to="BulletManager" method="_on_playa_shoot"]
