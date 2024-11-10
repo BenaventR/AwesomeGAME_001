@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3ro6a1010d15"
+path="res://.godot/imported/ES_Cherry - Hara Noda.mp3-79a5da1b9773dd11eaf9277b603db967.mp3str"
+
+[deps]
+
+source_file="res://mauricio/efct sounds/efct sounds/ES_Cherry - Hara Noda.mp3"
+dest_files=["res://.godot/imported/ES_Cherry - Hara Noda.mp3-79a5da1b9773dd11eaf9277b603db967.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
