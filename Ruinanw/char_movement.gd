@@ -3,11 +3,13 @@ extends CharacterBody2D
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -500.0
+var platVel = Vector2(0,0)
 var jumpnum =0
 var maxjump =2
 var shootdir = 1
 signal shoot
 signal healthChanged
+signal playerdeath
 
 var maxHealth: int = 100
 var currentHealth: int = 100
@@ -21,6 +23,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump. DoubleJump actually...
 	if Input.is_action_just_pressed("ui_accept") and jumpnum < maxjump:
 		velocity.y = JUMP_VELOCITY
+		velocity.x = platVel.x
 		jumpnum+=1
 	
 
@@ -30,10 +33,12 @@ func _physics_process(delta: float) -> void:
 	#print(direction)
 	if direction:
 		velocity.x = direction * SPEED
-	else:
+	elif is_on_floor():
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	platVel = get_platform_velocity()
+	
 	
 	
 	if direction==1:
@@ -51,5 +56,6 @@ func _on_timer_timeout() -> void:
 	currentHealth -=4
 	healthChanged.emit(currentHealth)
 	if currentHealth<1:
+		playerdeath.emit()
 		queue_free()
-	print(currentHealth)
+	#print(currentHealth)
