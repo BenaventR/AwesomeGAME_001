@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3jcjhrn0axph"]
+
+[ext_resource type="AudioStream" uid="uid://dr6tahrsv245u" path="res://mauricio/efct sounds/ES_Cherry - Hara Noda.mp3" id="1_4xxg8"]
+
+[node name="Djmusic" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_4xxg8")
+volume_db = -26.234
+autoplay = true

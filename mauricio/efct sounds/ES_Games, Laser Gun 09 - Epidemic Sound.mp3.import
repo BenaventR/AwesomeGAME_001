@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://e821s02tyeah"
+path="res://.godot/imported/ES_Games, Laser Gun 09 - Epidemic Sound.mp3-e1a02ac02e5973d3fc0ceeaa8a27509e.mp3str"
+
+[deps]
+
+source_file="res://mauricio/efct sounds/ES_Games, Laser Gun 09 - Epidemic Sound.mp3"
+dest_files=["res://.godot/imported/ES_Games, Laser Gun 09 - Epidemic Sound.mp3-e1a02ac02e5973d3fc0ceeaa8a27509e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
