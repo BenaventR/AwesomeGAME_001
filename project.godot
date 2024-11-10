@@ -8,12 +8,16 @@
 
 config_version=5
 
+<<<<<<<HEADconfig_version=5
+
 [application]
 
 config/name="AwesomeGAME_001"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="res://mauricio2/Main_Menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+"<<<<<<<HEAD[autoload]MusicaFondo"="*res://musica fondo.tres"
+Music="*res://music.tres"
 
 [autoload]
 

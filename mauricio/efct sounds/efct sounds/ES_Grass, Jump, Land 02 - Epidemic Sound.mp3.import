@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://72iwocikcbxg"
+path="res://.godot/imported/ES_Grass, Jump, Land 02 - Epidemic Sound.mp3-d36ff5953fa100ad6dac00e3324f39ee.mp3str"
+
+[deps]
+
+source_file="res://mauricio/efct sounds/efct sounds/ES_Grass, Jump, Land 02 - Epidemic Sound.mp3"
+dest_files=["res://.godot/imported/ES_Grass, Jump, Land 02 - Epidemic Sound.mp3-d36ff5953fa100ad6dac00e3324f39ee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

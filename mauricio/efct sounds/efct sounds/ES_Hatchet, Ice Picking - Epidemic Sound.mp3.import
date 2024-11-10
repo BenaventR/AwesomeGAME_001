@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://byq6sn8wt6gth"
+path="res://.godot/imported/ES_Hatchet, Ice Picking - Epidemic Sound.mp3-33238ec31c7068d48795f81c10d0b63f.mp3str"
+
+[deps]
+
+source_file="res://mauricio/efct sounds/efct sounds/ES_Hatchet, Ice Picking - Epidemic Sound.mp3"
+dest_files=["res://.godot/imported/ES_Hatchet, Ice Picking - Epidemic Sound.mp3-33238ec31c7068d48795f81c10d0b63f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
