@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dt86knjdi5402"]
+[gd_scene load_steps=9 format=3 uid="uid://dt86knjdi5402"]
 
+[ext_resource type="Script" path="res://Amanda GUI/main_menu.gd" id="1_hhdxj"]
 [ext_resource type="Texture2D" uid="uid://c8myb4gcrh42g" path="res://Amanda GUI/fire.JPG" id="1_p2ngf"]
 [ext_resource type="FontFile" uid="uid://of3d3khlem0y" path="res://Amanda GUI/04B_30__.TTF" id="2_2sqkx"]
 
@@ -62,6 +63,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hhdxj")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -129,10 +131,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -299.0
-offset_top = 114.0
-offset_right = 327.0
-offset_bottom = 155.0
+offset_left = -305.0
+offset_top = 274.0
+offset_right = 321.0
+offset_bottom = 315.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.339333, 0.696114, 0.903003, 1)
@@ -140,3 +142,7 @@ theme_override_fonts/font = ExtResource("2_2sqkx")
 theme_override_font_sizes/font_size = 40
 text = "AWESOME GAME V001"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_exit_pressed"]
