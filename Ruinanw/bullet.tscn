@@ -7,13 +7,18 @@
 size = Vector2(128, 129)
 
 [node name="bullet" type="Area2D"]
+scale = Vector2(0.15, 0.15)
 script = ExtResource("1_4te5b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 1)
 texture = ExtResource("1_b03aw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yhg60")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

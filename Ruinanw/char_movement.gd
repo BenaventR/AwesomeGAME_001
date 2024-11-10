@@ -7,6 +7,8 @@ var jumpnum =0
 var maxjump =2
 signal shoot
 
+var screen_size
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -14,10 +16,11 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	if is_on_floor():
 		jumpnum=0
-	# Handle jump.
+	# Handle jump. DoubleJump actually...
 	if Input.is_action_just_pressed("ui_accept") and jumpnum < maxjump:
 		velocity.y = JUMP_VELOCITY
 		jumpnum+=1
+	
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -28,9 +31,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-func get_input():
-	var dir = Input.get_axis("ui_left", "ui_right")
-	var pos = $playa.position
-	if Input.is_action_pressed("shoot"):
+	
+	
+	var pos = get_node("../playa").global_position
+	var dir = Vector2(direction,0)
+	if Input.is_action_just_pressed("shoot"):
 		shoot.emit(pos,dir)
-		print(pos)
+		#print(direction)
+		
