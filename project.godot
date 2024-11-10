@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-; Engine configuration file.
-; It's best edited using the editor UI and not directly,
-; since the parameters that go here are not all obvious.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
-
-config_version=5
-
-[application]
-
-config/name="AwesomeGAME_001"
-config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
-||||||| 37d52b4
-=======
 ; Engine configuration file.
 ; It's best edited using the editor UI and not directly,
 ; since the parameters that go here are not all obvious.
@@ -32,12 +14,12 @@ config/name="AwesomeGAME_001"
 run/main_scene="res://Amanda GUI/Main_Menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
-<<<<<<< HEAD
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gif/plugin.cfg")
-||||||| 1f58f8c
-=======
->>>>>>> 1f58f8cf4ef6254f2778db0caba0f4aab4562c93
->>>>>>> 6768ca2790022f5193df928f88889cdd1e8704f4
+enabled=PackedStringArray()
