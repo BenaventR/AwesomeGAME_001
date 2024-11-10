@@ -7,9 +7,10 @@ var jumpnum =0
 var maxjump =2
 var shootdir = 1
 signal shoot
+signal healthChanged
 
-var screen_size
-
+var maxHealth: int = 100
+var currentHealth: int = 100
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -26,7 +27,7 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
-	print(direction)
+	#print(direction)
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -45,4 +46,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot"):
 		shoot.emit(pos,sdir)
 		#print(direction)
-		
+
+func _on_timer_timeout() -> void:
+	currentHealth -=4
+	healthChanged.emit(currentHealth)
+	if currentHealth<1:
+		queue_free()
+	print(currentHealth)
