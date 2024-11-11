@@ -1,24 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://cm5hfrmmj2yq4"]
+[gd_scene load_steps=17 format=3 uid="uid://cm5hfrmmj2yq4"]
 
-<<<<<<< HEAD
-[ext_resource type="Script" path="res://Ruinanw/main_game.gd" id="1_pyue8"]
 [ext_resource type="Texture2D" uid="uid://b8e3i288t5roy" path="res://Amanda GUI/sprites/New folder/floor.png" id="1_r13nn"]
-||||||| c88c575
-[ext_resource type="Texture2D" uid="uid://i21nq2psutqv" path="res://Amanda GUI/sprites/floor.png" id="1_r13nn"]
-=======
-[ext_resource type="Texture2D" uid="uid://b8e3i288t5roy" path="res://Amanda GUI/sprites/New folder/floor.png" id="1_r13nn"]
->>>>>>> 3637eb219bbb40c0578a75dc53aacdf10633f1a7
+[ext_resource type="Script" path="res://Ruinanw/main_game.gd" id="1_xqjb2"]
 [ext_resource type="PackedScene" uid="uid://ug1v21q8yqo3" path="res://Ruinanw/char.tscn" id="2_kbodf"]
+[ext_resource type="Texture2D" uid="uid://c8myb4gcrh42g" path="res://Amanda GUI/fire.JPG" id="2_pwnvk"]
 [ext_resource type="Script" path="res://Ruinanw/bullet_manager.gd" id="3_xwly4"]
 [ext_resource type="PackedScene" uid="uid://dv45bt7alaim8" path="res://Ruinanw/bullet.tscn" id="4_ioc3f"]
+[ext_resource type="PackedScene" uid="uid://ctnfnoe50ltwl" path="res://Ruinanw/platform.tscn" id="5_8vlo5"]
 [ext_resource type="Script" path="res://Ruinanw/HP_bar.gd" id="5_tttua"]
-[ext_resource type="PackedScene" uid="uid://ctnfnoe50ltwl" path="res://Ruinanw/platform.tscn" id="6_wi5mm"]
-[ext_resource type="Script" path="res://Ruinanw/ice_manager.gd" id="7_qc3mm"]
-[ext_resource type="PackedScene" uid="uid://d257ikrd8cnlv" path="res://Ruinanw/ice_cube.tscn" id="8_0eho3"]
-[ext_resource type="Script" path="res://Ruinanw/score.gd" id="10_47uua"]
+[ext_resource type="FontFile" uid="uid://of3d3khlem0y" path="res://Amanda GUI/04B_30__.TTF" id="8_4c0ed"]
+[ext_resource type="PackedScene" uid="uid://d257ikrd8cnlv" path="res://Ruinanw/ice_cube.tscn" id="8_rcbdw"]
+[ext_resource type="Script" path="res://Ruinanw/score.gd" id="8_watsx"]
+[ext_resource type="Script" path="res://Ruinanw/ice_spawn.gd" id="10_jgwkj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lyea"]
-size = Vector2(131.018, 253)
+size = Vector2(379.104, 253)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjs4m"]
 bg_color = Color(0.759469, 0.0893011, 0, 1)
@@ -26,11 +22,20 @@ bg_color = Color(0.759469, 0.0893011, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piw4m"]
 bg_color = Color(0.356342, 0.719194, 0.825671, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_pc2ji"]
-font_size = 60
+[sub_resource type="LabelSettings" id="LabelSettings_8hbsg"]
+line_spacing = 0.0
+font = ExtResource("8_4c0ed")
+font_size = 40
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_pyue8")
+script = ExtResource("1_xqjb2")
+metadata/_edit_horizontal_guides_ = [392.0, 392.0, 771.0]
+metadata/_edit_vertical_guides_ = [1134.0, 688.0, 151.0, 600.0, 1215.0, 1659.0]
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(959, 414)
+scale = Vector2(1.575, 1.575)
+texture = ExtResource("2_pwnvk")
 
 [node name="floor" type="StaticBody2D" parent="."]
 position = Vector2(946, 1031)
@@ -43,23 +48,19 @@ scale = Vector2(0.269064, 0.976852)
 texture = ExtResource("1_r13nn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
-position = Vector2(1.39842, 47.5)
+position = Vector2(56.0203, 47.5)
 scale = Vector2(3.945, 1)
 shape = SubResource("RectangleShape2D_5lyea")
 
 [node name="playa" parent="." instance=ExtResource("2_kbodf")]
-position = Vector2(899, 893)
+position = Vector2(900, 897)
 
 [node name="BulletManager" type="Node2D" parent="."]
 script = ExtResource("3_xwly4")
 bullet_scene = ExtResource("4_ioc3f")
 
-[node name="Platforms" parent="." instance=ExtResource("6_wi5mm")]
-position = Vector2(0, -29.145)
-
-[node name="IceManager" type="Node2D" parent="."]
-script = ExtResource("7_qc3mm")
-bullet_scene = ExtResource("8_0eho3")
+[node name="Platforms" parent="." instance=ExtResource("5_8vlo5")]
+position = Vector2(0, -51.285)
 
 [node name="HP" type="CanvasLayer" parent="."]
 
@@ -78,13 +79,20 @@ script = ExtResource("5_tttua")
 player = ExtResource("2_kbodf")
 
 [node name="score" type="Label" parent="."]
-offset_left = 1600.0
-offset_top = 65.0
-offset_right = 1640.0
-offset_bottom = 88.0
-label_settings = SubResource("LabelSettings_pc2ji")
-script = ExtResource("10_47uua")
+offset_left = 1520.0
+offset_top = 57.0
+offset_right = 1560.0
+offset_bottom = 80.0
+label_settings = SubResource("LabelSettings_8hbsg")
+script = ExtResource("8_watsx")
+
+[node name="Ice_spawn" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+script = ExtResource("10_jgwkj")
+ice_scene = ExtResource("8_rcbdw")
 
 [connection signal="healthChanged" from="playa" to="HP/ProgressBar" method="_on_playa_health_changed"]
 [connection signal="playerdeath" from="playa" to="." method="_on_playa_playerdeath"]
 [connection signal="shoot" from="playa" to="BulletManager" method="_on_playa_shoot"]
+[connection signal="timeout" from="Ice_spawn" to="Ice_spawn" method="_on_timeout"]

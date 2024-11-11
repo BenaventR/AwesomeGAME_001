@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctnfnoe50ltwl"]
+[gd_scene load_steps=8 format=3 uid="uid://ctnfnoe50ltwl"]
 
-[ext_resource type="Texture2D" uid="uid://dppi0twhp60g1" path="res://icon.svg" id="1_rn1lr"]
+[ext_resource type="Texture2D" uid="uid://c5xm1hv3455y1" path="res://Amanda GUI/sprites/project/ice plateforms.png" id="1_y1055"]
 [ext_resource type="Script" path="res://Ruinanw/moving_platform.gd" id="2_4v12h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ys5l4"]
-size = Vector2(127, 128)
+size = Vector2(230, 15.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgvv4"]
+size = Vector2(153, 16)
 
 [sub_resource type="Animation" id="Animation_i5uvy"]
 length = 0.001
@@ -35,7 +38,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 3, 6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(175, 661), Vector2(1736.65, 661), Vector2(175, 661)]
+"values": [Vector2(175, 661), Vector2(1636, 661), Vector2(175, 661)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7lwpp"]
@@ -47,48 +50,79 @@ _data = {
 [node name="Platforms" type="Node2D"]
 
 [node name="Platform1" type="StaticBody2D" parent="."]
-position = Vector2(345, 849)
-scale = Vector2(3.61, 0.355)
+position = Vector2(225, 841)
+scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform1"]
-texture = ExtResource("1_rn1lr")
+texture = ExtResource("1_y1055")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Platform1"]
+position = Vector2(75, 0)
+texture = ExtResource("1_y1055")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Platform1"]
+position = Vector2(151, 0)
+texture = ExtResource("1_y1055")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
-position = Vector2(0.5, 0)
+position = Vector2(75, 4.25)
 shape = SubResource("RectangleShape2D_ys5l4")
 
 [node name="Platform2" type="StaticBody2D" parent="."]
-position = Vector2(1437, 846)
-scale = Vector2(3.61, 0.355)
+position = Vector2(1285, 841)
+scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform2"]
-texture = ExtResource("1_rn1lr")
+texture = ExtResource("1_y1055")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Platform2"]
+position = Vector2(75, 0)
+texture = ExtResource("1_y1055")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Platform2"]
+position = Vector2(151, 0)
+texture = ExtResource("1_y1055")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
-position = Vector2(0.5, 0)
+position = Vector2(75, 4.25)
 shape = SubResource("RectangleShape2D_ys5l4")
 
-[node name="Platform4" type="StaticBody2D" parent="."]
-position = Vector2(906, 487)
-scale = Vector2(3.61, 0.355)
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(761, 467)
+scale = Vector2(2, 2)
 
-[node name="Sprite2D" type="Sprite2D" parent="Platform4"]
-texture = ExtResource("1_rn1lr")
+[node name="Sprite2D" type="Sprite2D" parent="Platform3"]
+texture = ExtResource("1_y1055")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
-position = Vector2(0.5, 0)
+[node name="Sprite2D2" type="Sprite2D" parent="Platform3"]
+position = Vector2(75, 0)
+texture = ExtResource("1_y1055")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Platform3"]
+position = Vector2(151, 0)
+texture = ExtResource("1_y1055")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+position = Vector2(75, 4.25)
 shape = SubResource("RectangleShape2D_ys5l4")
 
 [node name="MovingPlatform" type="AnimatableBody2D" parent="."]
 position = Vector2(910, 661)
-scale = Vector2(2.17, 0.355)
+scale = Vector2(2, 2)
 script = ExtResource("2_4v12h")
 
 [node name="Sprite2D" type="Sprite2D" parent="MovingPlatform"]
-texture = ExtResource("1_rn1lr")
+scale = Vector2(1, 1)
+texture = ExtResource("1_y1055")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MovingPlatform"]
+position = Vector2(75, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("1_y1055")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatform"]
-shape = SubResource("RectangleShape2D_ys5l4")
+position = Vector2(36.5, 4)
+shape = SubResource("RectangleShape2D_kgvv4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatform"]
 libraries = {

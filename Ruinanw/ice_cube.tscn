@@ -1,20 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://d257ikrd8cnlv"]
+[gd_scene load_steps=4 format=3 uid="uid://d257ikrd8cnlv"]
 
-[ext_resource type="Texture2D" uid="uid://dppi0twhp60g1" path="res://icon.svg" id="1_sm37g"]
+[ext_resource type="Script" path="res://Ruinanw/ice_cube.gd" id="1_57v4v"]
+[ext_resource type="Texture2D" uid="uid://cnorq1t516k7s" path="res://Amanda GUI/sprites/project/icecube.png" id="2_08kv4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptg40"]
-size = Vector2(128, 128)
+[sub_resource type="CircleShape2D" id="CircleShape2D_8r0x3"]
+radius = 17.0294
 
-[node name="iceCube" type="Node2D"]
+[node name="iceCube" type="Area2D"]
+script = ExtResource("1_57v4v")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_08kv4")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-texture = ExtResource("1_sm37g")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -9)
+shape = SubResource("CircleShape2D_8r0x3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_ptg40")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+[node name="ice_kill" type="Timer" parent="."]
+wait_time = 7.0
 autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="ice_kill" to="." method="_on_ice_kill_timeout"]

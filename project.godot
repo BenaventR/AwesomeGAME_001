@@ -11,13 +11,7 @@ config_version=5
 [application]
 
 config/name="AwesomeGAME_001"
-<<<<<<< HEAD
 run/main_scene="res://Amanda GUI/Main_Menu.tscn"
-||||||| c88c575
-run/main_scene="res://mauricio2/Main_Menu.tscn"
-=======
-run/main_scene="res://Ruinanw/main.tscn"
->>>>>>> 3637eb219bbb40c0578a75dc53aacdf10633f1a7
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -34,13 +28,8 @@ Global="*res://Ruinanw/Global.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/initial_screen=1
-
-[display]
-
-window/size/viewport_width=1920
-window/size/viewport_height=1080
 window/size/initial_position_type=2
+window/size/initial_screen=1
 
 [input]
 

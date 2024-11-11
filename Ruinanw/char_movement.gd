@@ -53,9 +53,11 @@ func _physics_process(delta: float) -> void:
 		#print(direction)
 
 func _on_timer_timeout() -> void:
-	currentHealth -=4
+	currentHealth -=3
 	healthChanged.emit(currentHealth)
+	print(currentHealth)
+
 	if currentHealth<1:
 		playerdeath.emit()
 		queue_free()
-	#print(currentHealth)
+	
