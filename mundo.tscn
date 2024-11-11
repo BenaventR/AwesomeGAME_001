@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb6ake2x06mjd"]
+
+[ext_resource type="Script" path="res://mundo.gd" id="1_fhygt"]
+
+[node name="mundo" type="Node2D"]
+script = ExtResource("1_fhygt")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+bus = &"music_fondo "

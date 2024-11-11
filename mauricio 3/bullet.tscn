@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://djwhshfsdtjx7"]
+
+[ext_resource type="Script" path="res://Ruinanw/bullet.gd" id="1_txmo6"]
+[ext_resource type="Texture2D" uid="uid://s1ntsocpkhvs" path="res://Amanda GUI/sprites/New folder/main character_sticks.png" id="2_c6ea4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhg60"]
+size = Vector2(33.3333, 6.66666)
+
+[node name="bullet" type="Area2D"]
+scale = Vector2(0.85, 0.85)
+script = ExtResource("1_txmo6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-0.0656167, 1.90301)
+rotation = 1.5708
+scale = Vector2(0.976377, 1.19002)
+texture = ExtResource("2_c6ea4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yhg60")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

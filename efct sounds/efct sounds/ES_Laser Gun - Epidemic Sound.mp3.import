@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://rb0elj7p6ogv"
+path="res://.godot/imported/ES_Laser Gun - Epidemic Sound.mp3-35243f92ef37a0796be8f24cf30b7a52.mp3str"
+
+[deps]
+
+source_file="res://efct sounds/efct sounds/ES_Laser Gun - Epidemic Sound.mp3"
+dest_files=["res://.godot/imported/ES_Laser Gun - Epidemic Sound.mp3-35243f92ef37a0796be8f24cf30b7a52.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

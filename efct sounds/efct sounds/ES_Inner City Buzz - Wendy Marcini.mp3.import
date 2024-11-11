@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0m8p1b8m7cul"
+path="res://.godot/imported/ES_Inner City Buzz - Wendy Marcini.mp3-2e6bbf72f9fcdd134c8ee44f32b0d102.mp3str"
+
+[deps]
+
+source_file="res://efct sounds/efct sounds/ES_Inner City Buzz - Wendy Marcini.mp3"
+dest_files=["res://.godot/imported/ES_Inner City Buzz - Wendy Marcini.mp3-2e6bbf72f9fcdd134c8ee44f32b0d102.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

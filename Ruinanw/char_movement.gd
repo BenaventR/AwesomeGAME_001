@@ -1,5 +1,12 @@
 extends CharacterBody2D
 
+@onready var jump_2: AudioStreamPlayer = $jump2
+@onready var bullet: AudioStreamPlayer = $bullet
+
+
+
+
+
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -500.0
@@ -21,6 +28,11 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and jumpnum < maxjump:
 		velocity.y = JUMP_VELOCITY
 		jumpnum+=1
+		jump_2.play()
+		
+		
+
+		
 	
 
 	# Get the input direction and handle the movement/deceleration.
@@ -37,12 +49,16 @@ func _physics_process(delta: float) -> void:
 	
 	if direction==1:
 		shootdir = 1
+		
 	elif direction==-1:
 		shootdir = -1
+		
 	
 	var pos = get_node("../playa").global_position
 	var sdir = Vector2(shootdir,0)
 	if Input.is_action_just_pressed("shoot"):
 		shoot.emit(pos,sdir)
+		bullet.play()
+		
 		#print(direction)
 		
