@@ -160,14 +160,24 @@ theme_override_font_sizes/font_size = 40
 text = "AWESOME GAME V001"
 horizontal_alignment = 1
 
+<<<<<<< HEAD
 [node name="music fodo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_244x7")
 volume_db = -11.243
 autoplay = true
 
 [connection signal="mouse_entered" from="VBoxContainer/Button" to="." method="_on_button_mouse_entered"]
+||||||| 3fc48d8
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_start_pressed"]
+=======
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+<<<<<<< HEAD
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_start_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/Button2" to="." method="_on_button_2_mouse_entered"]
+||||||| 3fc48d8
+=======
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_start_pressed"]
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_exit_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

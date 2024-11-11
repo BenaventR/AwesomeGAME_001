@@ -1,8 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://ug1v21q8yqo3"]
 
 [ext_resource type="Script" path="res://Ruinanw/char_movement.gd" id="1_ha3k1"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bmov3anosnnn8" path="res://Amanda GUI/sprites/New folder/main character_fron1t.png" id="2_readm"]
 [ext_resource type="AudioStream" uid="uid://b5cp3pnmnjjub" path="res://mauricio/efct sounds/ES_Cartoon Jump - Epidemic Sound.mp3" id="3_ntiyr"]
+||||||| 3fc48d8
+[ext_resource type="Texture2D" uid="uid://bmov3anosnnn8" path="res://Amanda GUI/sprites/New folder/main character_fron1t.png" id="2_readm"]
+=======
+[ext_resource type="Texture2D" uid="uid://cvmrc1xw2c3" path="res://Amanda GUI/sprites/New folder/main character_front.png" id="2_ijk10"]
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vov58"]
 size = Vector2(45, 87.5)
@@ -14,12 +20,21 @@ script = ExtResource("1_ha3k1")
 texture_filter = 1
 position = Vector2(7.62939e-06, 7.62939e-06)
 scale = Vector2(2.6, 2.6)
-texture = ExtResource("2_readm")
+texture = ExtResource("2_ijk10")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 6.25)
 shape = SubResource("RectangleShape2D_vov58")
+<<<<<<< HEAD
 
 [node name="jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_ntiyr")
 volume_db = -61.838
+||||||| 3fc48d8
+=======
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81
