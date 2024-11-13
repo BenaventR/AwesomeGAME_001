@@ -1,10 +1,24 @@
+<<<<<<< HEAD
 [gd_scene load_steps=11 format=3 uid="uid://dt86knjdi5402"]
+||||||| 471f27a
+[gd_scene load_steps=9 format=3 uid="uid://dt86knjdi5402"]
+=======
+[gd_scene load_steps=13 format=3 uid="uid://dt86knjdi5402"]
+>>>>>>> 97473f49de37ab2b11805d2dd8e8fd6e2cd312a4
 
 [ext_resource type="Script" path="res://Amanda GUI/main_menu.gd" id="1_hhdxj"]
 [ext_resource type="Texture2D" uid="uid://c8myb4gcrh42g" path="res://Amanda GUI/fire.JPG" id="1_p2ngf"]
 [ext_resource type="FontFile" uid="uid://of3d3khlem0y" path="res://Amanda GUI/04B_30__.TTF" id="2_2sqkx"]
+<<<<<<< HEAD
 [ext_resource type="AudioStream" uid="uid://py2k5p24nu0u" path="res://mauricio/efct sounds/ES_Inner City Buzz - Wendy Marcini.mp3" id="2_mib2b"]
 [ext_resource type="AudioStream" uid="uid://ebs6kbmamije" path="res://mauricio/efct sounds/efct sounds/ES_Ice Crack High Squishy - Epidemic Sound.mp3" id="5_wr3nw"]
+||||||| 471f27a
+=======
+[ext_resource type="AudioStream" uid="uid://ebs6kbmamije" path="res://mauricio/efct sounds/efct sounds/ES_Ice Crack High Squishy - Epidemic Sound.mp3" id="4_ppnsm"]
+[ext_resource type="Script" path="res://Amanda GUI/button.gd" id="4_wmlb7"]
+[ext_resource type="AudioStream" uid="uid://72iwocikcbxg" path="res://mauricio/efct sounds/efct sounds/ES_Grass, Jump, Land 02 - Epidemic Sound.mp3" id="6_iixyw"]
+[ext_resource type="AudioStream" uid="uid://dwds5vcec4rh6" path="res://mauricio/efct sounds/efct sounds/ES_Inner City Buzz - Wendy Marcini.mp3" id="7_244x7"]
+>>>>>>> 97473f49de37ab2b11805d2dd8e8fd6e2cd312a4
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_crl11"]
 texture = ExtResource("1_p2ngf")
@@ -113,6 +127,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4bsxe")
 action_mode = 0
 keep_pressed_outside = true
 text = "START"
+script = ExtResource("4_wmlb7")
+
+[node name="click" type="AudioStreamPlayer" parent="VBoxContainer/Button"]
+stream = ExtResource("4_ppnsm")
+
+[node name="hover" type="AudioStreamPlayer" parent="VBoxContainer/Button"]
+stream = ExtResource("4_ppnsm")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Button"]
 stream = ExtResource("5_wr3nw")
@@ -135,6 +156,12 @@ action_mode = 0
 keep_pressed_outside = true
 text = "EXIT"
 
+[node name="click" type="AudioStreamPlayer" parent="VBoxContainer/Button2"]
+stream = ExtResource("6_iixyw")
+
+[node name="click2" type="AudioStreamPlayer" parent="VBoxContainer/Button2"]
+stream = ExtResource("6_iixyw")
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -152,9 +179,36 @@ theme_override_font_sizes/font_size = 40
 text = "AWESOME GAME V001"
 horizontal_alignment = 1
 
+<<<<<<< HEAD
 [connection signal="mouse_entered" from="VBoxContainer/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+||||||| 471f27a
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+=======
+<<<<<<< HEAD
+[node name="music fodo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_244x7")
+volume_db = -11.243
+autoplay = true
+
+[connection signal="mouse_entered" from="VBoxContainer/Button" to="." method="_on_button_mouse_entered"]
+||||||| 3fc48d8
+>>>>>>> 97473f49de37ab2b11805d2dd8e8fd6e2cd312a4
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_start_pressed"]
+<<<<<<< HEAD
+[connection signal="mouse_entered" from="VBoxContainer/Button2" to="." method="_on_button_2_mouse_entered"]
+||||||| 471f27a
+=======
+=======
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+<<<<<<< HEAD
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_start_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/Button2" to="." method="_on_button_2_mouse_entered"]
+||||||| 3fc48d8
+=======
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_start_pressed"]
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81
+>>>>>>> 97473f49de37ab2b11805d2dd8e8fd6e2cd312a4
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_exit_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

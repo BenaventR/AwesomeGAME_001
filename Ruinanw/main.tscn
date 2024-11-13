@@ -1,20 +1,55 @@
+<<<<<<< HEAD
 [gd_scene load_steps=20 format=3 uid="uid://cm5hfrmmj2yq4"]
+||||||| 471f27a
+[gd_scene load_steps=17 format=3 uid="uid://cm5hfrmmj2yq4"]
+=======
+<<<<<<< HEAD
+[gd_scene load_steps=12 format=3 uid="uid://cm5hfrmmj2yq4"]
+||||||| 3fc48d8
+[gd_scene load_steps=7 format=3 uid="uid://cm5hfrmmj2yq4"]
+=======
+[gd_scene load_steps=17 format=3 uid="uid://cm5hfrmmj2yq4"]
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81
+>>>>>>> 97473f49de37ab2b11805d2dd8e8fd6e2cd312a4
 
+<<<<<<< HEAD
+[ext_resource type="Texture2D" uid="uid://i21nq2psutqv" path="res://Amanda GUI/sprites/floor.png" id="1_r13nn"]
+||||||| 3fc48d8
+[ext_resource type="Texture2D" uid="uid://c8myb4gcrh42g" path="res://Amanda GUI/fire.JPG" id="1_ar862"]
+[ext_resource type="Texture2D" uid="uid://i21nq2psutqv" path="res://Amanda GUI/sprites/floor.png" id="1_r13nn"]
+=======
 [ext_resource type="Texture2D" uid="uid://b8e3i288t5roy" path="res://Amanda GUI/sprites/New folder/floor.png" id="1_r13nn"]
 [ext_resource type="Script" path="res://Ruinanw/main_game.gd" id="1_xqjb2"]
+<<<<<<< HEAD
 [ext_resource type="AudioStream" uid="uid://3ro6a1010d15" path="res://mauricio/efct sounds/efct sounds/ES_Cherry - Hara Noda.mp3" id="2_bqbl3"]
+||||||| 471f27a
+=======
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81
+>>>>>>> 97473f49de37ab2b11805d2dd8e8fd6e2cd312a4
 [ext_resource type="PackedScene" uid="uid://ug1v21q8yqo3" path="res://Ruinanw/char.tscn" id="2_kbodf"]
 [ext_resource type="Texture2D" uid="uid://c8myb4gcrh42g" path="res://Amanda GUI/fire.JPG" id="2_pwnvk"]
 [ext_resource type="Script" path="res://Ruinanw/bullet_manager.gd" id="3_xwly4"]
+[ext_resource type="AudioStream" uid="uid://bbbv2ntixr07h" path="res://mauricio/efct sounds/efct sounds/ES_Laser Gun - Epidemic Sound.mp3" id="4_5r117"]
+[ext_resource type="AudioStream" uid="uid://b5cp3pnmnjjub" path="res://mauricio/efct sounds/ES_Cartoon Jump - Epidemic Sound.mp3" id="4_ep5kh"]
 [ext_resource type="PackedScene" uid="uid://dv45bt7alaim8" path="res://Ruinanw/bullet.tscn" id="4_ioc3f"]
+<<<<<<< HEAD
+[ext_resource type="AudioStream" uid="uid://3ro6a1010d15" path="res://mauricio/efct sounds/efct sounds/ES_Cherry - Hara Noda.mp3" id="7_021ro"]
+[ext_resource type="AudioStream" uid="uid://dwds5vcec4rh6" path="res://mauricio/efct sounds/efct sounds/ES_Inner City Buzz - Wendy Marcini.mp3" id="7_enehp"]
+||||||| 3fc48d8
+=======
 [ext_resource type="PackedScene" uid="uid://ctnfnoe50ltwl" path="res://Ruinanw/platform.tscn" id="5_8vlo5"]
 [ext_resource type="Script" path="res://Ruinanw/HP_bar.gd" id="5_tttua"]
 [ext_resource type="FontFile" uid="uid://of3d3khlem0y" path="res://Amanda GUI/04B_30__.TTF" id="8_4c0ed"]
 [ext_resource type="PackedScene" uid="uid://d257ikrd8cnlv" path="res://Ruinanw/ice_cube.tscn" id="8_rcbdw"]
 [ext_resource type="Script" path="res://Ruinanw/score.gd" id="8_watsx"]
 [ext_resource type="Script" path="res://Ruinanw/ice_spawn.gd" id="10_jgwkj"]
+<<<<<<< HEAD
 [ext_resource type="AudioStream" uid="uid://bd8ho02iy4wrk" path="res://mauricio/efct sounds/ES_Grass, Jump, Land 02 - Epidemic Sound.mp3" id="14_v8n1r"]
 [ext_resource type="AudioStream" uid="uid://jv541wua3dpp" path="res://mauricio/efct sounds/efct sounds/ES_Games, Laser Gun 09 - Epidemic Sound.mp3" id="15_p11dd"]
+||||||| 471f27a
+=======
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81
+>>>>>>> 97473f49de37ab2b11805d2dd8e8fd6e2cd312a4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lyea"]
 size = Vector2(379.104, 253)
@@ -30,20 +65,44 @@ line_spacing = 0.0
 font = ExtResource("8_4c0ed")
 font_size = 40
 
+<<<<<<< HEAD
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjs4m"]
+bg_color = Color(0.759469, 0.0893011, 0, 1)
+||||||| 3fc48d8
+[node name="main" type="Node2D"]
+=======
 [node name="main" type="Node2D"]
 script = ExtResource("1_xqjb2")
 metadata/_edit_horizontal_guides_ = [392.0, 392.0, 771.0]
 metadata/_edit_vertical_guides_ = [1134.0, 688.0, 151.0, 600.0, 1215.0, 1659.0]
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81
 
+<<<<<<< HEAD
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_bqbl3")
 volume_db = -12.0
 autoplay = true
 
+||||||| 471f27a
+=======
+<<<<<<< HEAD
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piw4m"]
+bg_color = Color(0.356342, 0.719194, 0.825671, 1)
+
+[node name="main" type="Node2D"]
+||||||| 3fc48d8
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(955, 394.5)
+scale = Vector2(1.64006, 1.70851)
+texture = ExtResource("1_ar862")
+=======
+>>>>>>> 97473f49de37ab2b11805d2dd8e8fd6e2cd312a4
 [node name="BG" type="Sprite2D" parent="."]
 position = Vector2(959, 414)
 scale = Vector2(1.575, 1.575)
 texture = ExtResource("2_pwnvk")
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81
 
 [node name="floor" type="StaticBody2D" parent="."]
 position = Vector2(946, 1031)
@@ -63,10 +122,46 @@ shape = SubResource("RectangleShape2D_5lyea")
 [node name="playa" parent="." instance=ExtResource("2_kbodf")]
 position = Vector2(900, 897)
 
-[node name="BulletManager" type="Node2D" parent="."]
+[node name="jump2" type="AudioStreamPlayer" parent="playa"]
+stream = ExtResource("4_ep5kh")
+volume_db = -24.36
+
+[node name="bullet" type="AudioStreamPlayer" parent="playa"]
+stream = ExtResource("4_5r117")
+volume_db = -15.928
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 65.0
+offset_top = 65.0
+offset_right = 572.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 81
+theme_override_styles/background = SubResource("StyleBoxFlat_sjs4m")
+theme_override_styles/fill = SubResource("StyleBoxFlat_piw4m")
+value = 100.0
+show_percentage = false
+
+[node name="BulletManager" type="Node2D" parent="CanvasLayer"]
 script = ExtResource("3_xwly4")
 bullet_scene = ExtResource("4_ioc3f")
 
+<<<<<<< HEAD
+[node name="fondo" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("7_021ro")
+volume_db = -17.802
+autoplay = true
+
+[node name="fondo sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_enehp")
+volume_db = -5.622
+
+[connection signal="shoot" from="playa" to="CanvasLayer/BulletManager" method="_on_playa_shoot"]
+||||||| 3fc48d8
+[connection signal="shoot" from="playa" to="BulletManager" method="_on_playa_shoot"]
+=======
 [node name="Platforms" parent="." instance=ExtResource("5_8vlo5")]
 position = Vector2(0, -51.285)
 
@@ -113,3 +208,4 @@ volume_db = 12.0
 [connection signal="playerdeath" from="playa" to="." method="_on_playa_playerdeath"]
 [connection signal="shoot" from="playa" to="BulletManager" method="_on_playa_shoot"]
 [connection signal="timeout" from="Ice_spawn" to="Ice_spawn" method="_on_timeout"]
+>>>>>>> 471f27a6cc37d37abbd3bcba87d9353bb6497e81

@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://dba1y2k0wjs0q"]
+
+[ext_resource type="Texture2D" uid="uid://c8myb4gcrh42g" path="res://Amanda GUI/fire.JPG" id="1_s0pqw"]
+[ext_resource type="Texture2D" uid="uid://i21nq2psutqv" path="res://Amanda GUI/sprites/floor.png" id="2_yd6cn"]
+[ext_resource type="PackedScene" uid="uid://ug1v21q8yqo3" path="res://Ruinanw/char.tscn" id="3_rteg1"]
+[ext_resource type="Script" path="res://Ruinanw/bullet_manager.gd" id="4_khd1h"]
+[ext_resource type="AudioStream" uid="uid://b5cp3pnmnjjub" path="res://mauricio/efct sounds/ES_Cartoon Jump - Epidemic Sound.mp3" id="4_yjbic"]
+[ext_resource type="PackedScene" uid="uid://dv45bt7alaim8" path="res://Ruinanw/bullet.tscn" id="5_5yog3"]
+[ext_resource type="AudioStream" uid="uid://jv541wua3dpp" path="res://mauricio/efct sounds/efct sounds/ES_Games, Laser Gun 09 - Epidemic Sound.mp3" id="5_f3sgn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lyea"]
+size = Vector2(131.018, 253)
+
+[node name="main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(955, 394.5)
+scale = Vector2(1.64006, 1.70851)
+texture = ExtResource("1_s0pqw")
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2(946, 1031)
+scale = Vector2(3.945, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="floor"]
+texture_filter = 1
+position = Vector2(-0.253487, -247)
+scale = Vector2(0.269064, 0.976852)
+texture = ExtResource("2_yd6cn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2(1.39842, 47.5)
+scale = Vector2(3.945, 1)
+shape = SubResource("RectangleShape2D_5lyea")
+
+[node name="playa" parent="." instance=ExtResource("3_rteg1")]
+
+[node name="jump2" type="AudioStreamPlayer2D" parent="playa"]
+stream = ExtResource("4_yjbic")
+volume_db = -0.18
+
+[node name="bulletsound" type="AudioStreamPlayer" parent="playa"]
+stream = ExtResource("5_f3sgn")
+
+[node name="BulletManager" type="Node2D" parent="."]
+script = ExtResource("4_khd1h")
+bullet_scene = ExtResource("5_5yog3")
+
+[node name="musicafondo" type="AudioStreamPlayer" parent="."]
+
+[connection signal="shoot" from="playa" to="BulletManager" method="_on_playa_shoot"]
