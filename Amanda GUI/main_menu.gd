@@ -17,3 +17,19 @@ func _on_button_start_pressed() -> void:
 
 func _on_button_exit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_button_pressed() -> void:
+	$VBoxContainer/Button/AudioStreamPlayer.play()
+
+
+func _on_button_mouse_entered() -> void:
+	$VBoxContainer/Button/AudioStreamPlayer.play()
+
+
+func _on_button_2_pressed() -> void:
+	$VBoxContainer/Button/AudioStreamPlayer.play()
+
+
+func _on_button_2_mouse_entered() -> void:
+	$VBoxContainer/Button/AudioStreamPlayer.play()

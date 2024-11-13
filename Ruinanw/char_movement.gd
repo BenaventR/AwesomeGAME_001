@@ -11,8 +11,9 @@ signal shoot
 signal healthChanged
 signal playerdeath
 
-var maxHealth: int = 100
-var currentHealth: int = 100
+var maxHealth: int = 500
+var currentHealth: int = 500
+var timer = 0 
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -25,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		velocity.x = platVel.x
 		jumpnum+=1
-	
+		$"../jump".play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -40,6 +41,16 @@ func _physics_process(delta: float) -> void:
 	platVel = get_platform_velocity()
 	
 	
+	timer += 1
+	if timer >= 4:
+		currentHealth -=1
+		healthChanged.emit(currentHealth)
+		timer = 0
+	if currentHealth<1:
+		playerdeath.emit()
+		queue_free()
+	
+	
 	
 	if direction==1:
 		shootdir = 1
@@ -50,14 +61,19 @@ func _physics_process(delta: float) -> void:
 	var sdir = Vector2(shootdir,0)
 	if Input.is_action_just_pressed("shoot"):
 		shoot.emit(pos,sdir)
+		$"../bullet".play()
 		#print(direction)
+	#if Input.is_action_just_pressed("dash"):
+		#print('dash')
+		#if direction:
+			#velocity.x = direction * SPEED * 10
 
-func _on_timer_timeout() -> void:
-	currentHealth -=3
-	healthChanged.emit(currentHealth)
-	print(currentHealth)
-
-	if currentHealth<1:
-		playerdeath.emit()
-		queue_free()
-	
+#func _on_timer_timeout() -> void:
+	#currentHealth -=3
+	#healthChanged.emit(currentHealth)
+	#print(currentHealth)
+#
+	#if currentHealth<1:
+		#playerdeath.emit()
+		#queue_free()
+	#

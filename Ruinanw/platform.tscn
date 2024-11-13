@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ctnfnoe50ltwl"]
 
-[ext_resource type="Texture2D" uid="uid://c5xm1hv3455y1" path="res://Amanda GUI/sprites/project/ice plateforms.png" id="1_y1055"]
+[ext_resource type="Texture2D" uid="uid://d250xopspgihv" path="res://Amanda GUI/sprites/New folder/ice plateforms.png" id="1_hvp2j"]
 [ext_resource type="Script" path="res://Ruinanw/moving_platform.gd" id="2_4v12h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ys5l4"]
@@ -54,15 +54,15 @@ position = Vector2(225, 841)
 scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform1"]
-texture = ExtResource("1_y1055")
+texture = ExtResource("1_hvp2j")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Platform1"]
 position = Vector2(75, 0)
-texture = ExtResource("1_y1055")
+texture = ExtResource("1_hvp2j")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Platform1"]
 position = Vector2(151, 0)
-texture = ExtResource("1_y1055")
+texture = ExtResource("1_hvp2j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
 position = Vector2(75, 4.25)
@@ -73,15 +73,15 @@ position = Vector2(1285, 841)
 scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform2"]
-texture = ExtResource("1_y1055")
+texture = ExtResource("1_hvp2j")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Platform2"]
 position = Vector2(75, 0)
-texture = ExtResource("1_y1055")
+texture = ExtResource("1_hvp2j")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Platform2"]
 position = Vector2(151, 0)
-texture = ExtResource("1_y1055")
+texture = ExtResource("1_hvp2j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
 position = Vector2(75, 4.25)
@@ -92,15 +92,15 @@ position = Vector2(761, 467)
 scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Platform3"]
-texture = ExtResource("1_y1055")
+texture = ExtResource("1_hvp2j")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Platform3"]
 position = Vector2(75, 0)
-texture = ExtResource("1_y1055")
+texture = ExtResource("1_hvp2j")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Platform3"]
 position = Vector2(151, 0)
-texture = ExtResource("1_y1055")
+texture = ExtResource("1_hvp2j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
 position = Vector2(75, 4.25)
@@ -112,13 +112,11 @@ scale = Vector2(2, 2)
 script = ExtResource("2_4v12h")
 
 [node name="Sprite2D" type="Sprite2D" parent="MovingPlatform"]
-scale = Vector2(1, 1)
-texture = ExtResource("1_y1055")
+texture = ExtResource("1_hvp2j")
 
 [node name="Sprite2D2" type="Sprite2D" parent="MovingPlatform"]
 position = Vector2(75, 0)
-scale = Vector2(1, 1)
-texture = ExtResource("1_y1055")
+texture = ExtResource("1_hvp2j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatform"]
 position = Vector2(36.5, 4)

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://mvomucm8w2g6"]
+
+[ext_resource type="AudioStream" uid="uid://bumwrr1qu3qt5" path="res://RicardoSounds/Creepy Nuts - オトノケ(Otonoke) 【Official MV】 [Dandadan OP] - Creepy Nuts (youtube).mp3" id="1_bgmjf"]
+
+[node name="BgMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_bgmjf")

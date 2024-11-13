@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://cm5hfrmmj2yq4"]
+[gd_scene load_steps=20 format=3 uid="uid://cm5hfrmmj2yq4"]
 
 [ext_resource type="Texture2D" uid="uid://b8e3i288t5roy" path="res://Amanda GUI/sprites/New folder/floor.png" id="1_r13nn"]
 [ext_resource type="Script" path="res://Ruinanw/main_game.gd" id="1_xqjb2"]
+[ext_resource type="AudioStream" uid="uid://3ro6a1010d15" path="res://mauricio/efct sounds/efct sounds/ES_Cherry - Hara Noda.mp3" id="2_bqbl3"]
 [ext_resource type="PackedScene" uid="uid://ug1v21q8yqo3" path="res://Ruinanw/char.tscn" id="2_kbodf"]
 [ext_resource type="Texture2D" uid="uid://c8myb4gcrh42g" path="res://Amanda GUI/fire.JPG" id="2_pwnvk"]
 [ext_resource type="Script" path="res://Ruinanw/bullet_manager.gd" id="3_xwly4"]
@@ -12,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://d257ikrd8cnlv" path="res://Ruinanw/ice_cube.tscn" id="8_rcbdw"]
 [ext_resource type="Script" path="res://Ruinanw/score.gd" id="8_watsx"]
 [ext_resource type="Script" path="res://Ruinanw/ice_spawn.gd" id="10_jgwkj"]
+[ext_resource type="AudioStream" uid="uid://bd8ho02iy4wrk" path="res://mauricio/efct sounds/ES_Grass, Jump, Land 02 - Epidemic Sound.mp3" id="14_v8n1r"]
+[ext_resource type="AudioStream" uid="uid://jv541wua3dpp" path="res://mauricio/efct sounds/efct sounds/ES_Games, Laser Gun 09 - Epidemic Sound.mp3" id="15_p11dd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5lyea"]
 size = Vector2(379.104, 253)
@@ -31,6 +34,11 @@ font_size = 40
 script = ExtResource("1_xqjb2")
 metadata/_edit_horizontal_guides_ = [392.0, 392.0, 771.0]
 metadata/_edit_vertical_guides_ = [1134.0, 688.0, 151.0, 600.0, 1215.0, 1659.0]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bqbl3")
+volume_db = -12.0
+autoplay = true
 
 [node name="BG" type="Sprite2D" parent="."]
 position = Vector2(959, 414)
@@ -73,6 +81,7 @@ offset_bottom = 82.0
 theme_override_font_sizes/font_size = 81
 theme_override_styles/background = SubResource("StyleBoxFlat_sjs4m")
 theme_override_styles/fill = SubResource("StyleBoxFlat_piw4m")
+max_value = 500.0
 value = 100.0
 show_percentage = false
 script = ExtResource("5_tttua")
@@ -91,6 +100,14 @@ wait_time = 5.0
 autostart = true
 script = ExtResource("10_jgwkj")
 ice_scene = ExtResource("8_rcbdw")
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_v8n1r")
+volume_db = 12.0
+
+[node name="bullet" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_p11dd")
+volume_db = 12.0
 
 [connection signal="healthChanged" from="playa" to="HP/ProgressBar" method="_on_playa_health_changed"]
 [connection signal="playerdeath" from="playa" to="." method="_on_playa_playerdeath"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d257ikrd8cnlv"]
 
 [ext_resource type="Script" path="res://Ruinanw/ice_cube.gd" id="1_57v4v"]
-[ext_resource type="Texture2D" uid="uid://cnorq1t516k7s" path="res://Amanda GUI/sprites/project/icecube.png" id="2_08kv4"]
+[ext_resource type="Texture2D" uid="uid://cx2w2ag6qye4k" path="res://Amanda GUI/sprites/New folder/icecube.png" id="2_vscs5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8r0x3"]
 radius = 17.0294
@@ -10,7 +10,7 @@ radius = 17.0294
 script = ExtResource("1_57v4v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_08kv4")
+texture = ExtResource("2_vscs5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, -9)
